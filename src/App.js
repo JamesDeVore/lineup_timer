@@ -10,7 +10,6 @@ class App extends Component {
       <TitleBar />
       <hr />
       <RecentPost />
-      <div className="row">Link to recent post</div>
       </div>
     )
   }

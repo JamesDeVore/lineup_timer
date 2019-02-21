@@ -36,16 +36,19 @@ export default class RecentPost extends Component {
         <h2>Most recent post:</h2>
         </div>
         <div className="row recentPost">
-        <div className="col-md-12">
-         <a href={`https://reddit.com/${permalink}`} className="link">{title}</a>
-            </div>
-            <div className="col-md-1">
-            <p>Total Score: {score}</p>
+        <div className="col-md-12 text-center titleDiv">
+         <a href={`https://reddit.com/${permalink}`} className="link align-bottom">{title}</a></div>
+         
+            <div className="posttext text-center col-md-12">
+              <hr />
+              <p className="postText">{selftext}</p>
             </div>
             <div className="col-md-6">
-          <p className="postText">{selftext}</p>
-          <p className="postAuthor">{author}</p>
-              <p className="postDate">{moment.unix(created_utc).format("MMM-Do-YYYY LT")}</p>
+            <p>Total Score: <span className="score">{score}</span></p>
+              <p className="postAuthor">Author: {author}</p>
+            </div>
+            <div className="col-md-6 date align-bottom">
+              <p className="postDate align-bottom">{moment.unix(created_utc).format("MMM-Do-YYYY LT")}</p>
             </div>
         </div>
         </div>

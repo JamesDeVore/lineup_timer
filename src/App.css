@@ -1,16 +1,37 @@
 div {
   /* border: 1px solid black; */
 }
+#root {
+  font-family: Arial, Helvetica, sans-serif
+}
 .title-card {
   background-color:antiquewhite;
   border-radius:5px;
   background-size: 100% 100%;
 }
-
+.score {
+  font-weight: 500;
+}
 .timer {
   text-align: center;
 }
+.title-div {
+  display:flex;
+ 
+}
 .title {
-    font-size: 6em;
-
+    font-size: 7em;
+}
+.timeSince {
+  font-weight:600;
+}
+.recentPost {
+  box-shadow: 0 0 0 3px rgba(52,144,220,0.2);
+  margin-bottom:2em;
+  border-radius: 5px;
+}
+.link {
+  font-weight:600;
+  font-size:1.5em;
+  color:rgb(84, 0, 133)
 }
