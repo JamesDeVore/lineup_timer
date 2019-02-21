@@ -29,13 +29,14 @@ export default class Timer extends Component {
     if(this.state.currentTime > 1000){
     let timeDifference = this.state.currentTime - this.props.time
     return (
-      <h1>It has been: {timeDifference} seconds since someone asked about the lineup</h1>
+      <div className="col-md-8 offset-md-2">
+        <h2>It has been {timeDifference} seconds since someone asked about the lineup</h2></div>
     ) 
   }
 }
   render() {
     return (
-      <div>
+      <div className="row">
         {this.renderTime()}
       </div>
     )

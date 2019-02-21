@@ -8,6 +8,7 @@ class App extends Component {
     return (
       <div className="container">
       <TitleBar />
+      <hr />
       <RecentPost />
       <div className="row">Link to recent post</div>
       </div>
