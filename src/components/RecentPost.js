@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {fetchRecentPosts} from '../utils/fetchPosts'
+import Timer from './Timer'
 
 export default class RecentPost extends Component {
   constructor(props){
@@ -12,6 +13,15 @@ export default class RecentPost extends Component {
     let post = await fetchRecentPosts()
 
     this.setState({recentPost:post})
+  }
+
+  renderTimer(){
+    if(this.state.recentPost){
+      let {data:{created_utc}} = this.state.recentPost
+      return (<Timer time={created_utc} />)
+    } else {
+      return 
+    }
   }
 
   renderPost = () => {
@@ -38,7 +48,7 @@ export default class RecentPost extends Component {
     return (
       <div className="row justify-content-center">
         <div className="col-md-12 timer ">
-        <h1 className="title">Timer</h1>
+        {this.renderTimer()}
         </div>
         {this.renderPost()}
       </div>
