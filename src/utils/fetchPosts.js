@@ -1,6 +1,6 @@
 export const fetchRecentPosts = async () => {
   let recentLineupPost;
-  let terms = ["lineup", "LINEUP", "Lineup", "setlist", "Setlist", "prediction", "predictions", "line up"]
+  let terms = ["lineup", "line-up",   "LINEUP", "Lineup", "setlist", "Setlist", "prediction", "predictions", "line up"]
   let initialResponse = await fetch("https://www.reddit.com/r/electricdaisycarnival/new/.json?limit=500&sort=date").then(r=>r.json())
   let { data: {children, after} } = initialResponse;
   children.forEach(child => {
