@@ -8,10 +8,10 @@ export default class Timer extends Component {
     }
   }
 
-  componentDidMount() {
-    let date = new Date()
-    this.interval = setInterval(() => this.setState({ currentTime: Math.round(date.getTime() / 1000 )}), 1000);
-  }
+  // componentDidMount() {
+  //   let date = new Date()
+  //   this.interval = setInterval(() => this.setState({ currentTime: Math.round(date.getTime() / 1000 )}), 1000);
+  // }
   tick() {
     let date = new Date()
     this.setState({ currentTime: Math.round(date.getTime() / 1000) });
@@ -36,7 +36,7 @@ export default class Timer extends Component {
     let timeDifference = this.state.currentTime - this.props.time
     return (
       <div className="col-md-8 offset-md-2">
-        <h2 className="timeSince">It has been {this.convertSecondsToHMS(timeDifference)} since someone asked about the lineup</h2></div>
+        <h2 className="timeSince">It has been {this.convertSecondsToHMS(timeDifference)} since someone posted about the lineup</h2></div>
     ) 
   }
 }

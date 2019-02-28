@@ -2,36 +2,58 @@ div {
   /* border: 1px solid black; */
 }
 #root {
-  font-family: Arial, Helvetica, sans-serif
-}
-.title-card {
-  background-color:antiquewhite;
-  border-radius:5px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("http://www.thenocturnaltimes.com/wp-content/uploads/2016/04/edc-20-video.jpg");
   background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color:white;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+@media only screen and (max-width: 600px) {
+  #root{
+    background-image: url("https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/sites/2/2018/01/09153555/edc-las-vegas-wallpapers_15_1080x1920.jpg")
+  }
+  .bkgd {
+    position: fixed;
+    background-color:black;
+    z-index: 0;
+    height:100vh;
+  }
+  .recentTitle {
+    margin-left:15px;
+  }
+  
 }
 .score {
   font-weight: 500;
 }
 .timer {
   text-align: center;
+
 }
 .title-div {
   display:flex;
- 
 }
 .title {
     font-size: 7em;
 }
 .timeSince {
   font-weight:600;
+    font-size:2em;
 }
 .recentPost {
   box-shadow: 0 0 0 3px rgba(52,144,220,0.2);
+   background-color:rgba(0, 0, 0, 0.664);
   margin-bottom:2em;
   border-radius: 5px;
+  max-width:100%;
 }
 .link {
   font-weight:600;
   font-size:1.5em;
-  color:rgb(84, 0, 133)
+  color:rgb(137, 0, 216)
 }

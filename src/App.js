@@ -10,6 +10,7 @@ class App extends Component {
       <TitleBar />
       <hr />
       <RecentPost />
+      <div className="bkgd"></div>
       </div>
     )
   }

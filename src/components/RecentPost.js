@@ -29,18 +29,16 @@ export default class RecentPost extends Component {
     if (this.state.recentPost) {
       console.log(this.state)
       let { data: { title, selftext, score, author, created_utc, permalink } } = this.state.recentPost
-
+      if(selftext === ""){selftext = "(No Post Body)"}
       return (
         <div>
         <div className="row">
-        <h2>Most recent post:</h2>
+        <h2 className="col-xs-8 col-offset-2 recentTitle">Most recent post:</h2>
         </div>
         <div className="row recentPost">
         <div className="col-md-12 text-center titleDiv">
-         <a href={`https://reddit.com/${permalink}`} className="link align-bottom">{title}</a></div>
-         
+         <a href={`https://reddit.com/${permalink}`} className="link align-bottom">{title}</a></div>     
             <div className="posttext text-center col-md-12">
-              <hr />
               <p className="postText">{selftext}</p>
             </div>
             <div className="col-md-6">
